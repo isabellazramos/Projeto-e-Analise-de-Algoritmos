@@ -9,5 +9,6 @@ include_directories(src)
 
 add_executable(TP00_PAA
         headers/funcoes.h
+        headers/menu.h
         src/funcoes.c
-        main.c headers/menu.h)
+        main.c)

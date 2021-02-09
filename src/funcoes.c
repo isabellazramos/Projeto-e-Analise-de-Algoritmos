@@ -35,6 +35,7 @@ void criaAsterico(structMatriz *matriz, int quantidade){
     }
     for (int i = 0; i < quantidade; ++i) {
         while (1){
+
             linha = 1 + (rand()%LINHA-2);
             coluna = 1 + (rand()%COLUNA-2);
             if(matriz->matriz[linha][coluna] == ' ') {
@@ -43,5 +44,61 @@ void criaAsterico(structMatriz *matriz, int quantidade){
         }
         matriz->matriz[linha][coluna] = '*';
     }
+}
 
+void criaSoma(structMatriz *matriz, int quantidade){
+    int  linha, coluna;
+    srand(time(NULL));
+    if (quantidade > 100){
+        quantidade = 100;
+    }
+    for (int i = 0; i < quantidade; ++i) {
+        while (1){
+            linha = 1 + (rand()%LINHA-2);
+            coluna = 1 + (rand()%COLUNA-2);
+            if(matriz->matriz[linha][coluna] == ' ' && matriz->matriz[linha+1][coluna] == ' ' && matriz->matriz[linha-1][coluna] == ' ' && matriz->matriz[linha][coluna-1] ==  ' ' && matriz->matriz[linha][coluna+1] == ' '){
+                break;
+            }
+        }
+        matriz->matriz[linha][coluna] = '*';
+        matriz->matriz[linha+1][coluna] = '*';
+        matriz->matriz[linha-1][coluna] = '*';
+        matriz->matriz[linha][coluna+1] = '*';
+        matriz->matriz[linha][coluna-1] = '*';
+    }
+}
+
+void criaLetraX(structMatriz *matriz, int quantidade){
+    int  linha, coluna;
+    srand(time(NULL));
+    if (quantidade > 100){
+        quantidade = 100;
+    }
+    for (int i = 0; i < quantidade; ++i) {
+        while (1){
+            linha = 1 + (rand()%LINHA-2);
+            coluna = 1 + (rand()%COLUNA-2);
+            if(matriz->matriz[linha][coluna] == ' ' && matriz->matriz[linha+1][coluna+1] == ' ' && matriz->matriz[linha-1][coluna-1] == ' ' && matriz->matriz[linha+1][coluna-1] ==  ' ' && matriz->matriz[linha-1][coluna+1] == ' '){
+                break;
+            }
+        }
+        matriz->matriz[linha][coluna] = '*';
+        matriz->matriz[linha+1][coluna+1] = '*';
+        matriz->matriz[linha-1][coluna-1] = '*';
+        matriz->matriz[linha-1][coluna+1] = '*';
+        matriz->matriz[linha+1][coluna-1] = '*';
+    }
+}
+
+void criaAleatorias(structMatriz *matriz, int quantidade){
+    srand(time(NULL));
+    int asterisco,soma,letrax;
+
+    asterisco = 1+ (rand()%quantidade);
+    soma = 1 + rand()%(quantidade-asterisco);
+    letrax = quantidade - (asterisco + soma);
+    printf("Asterisco %d | Soma %d | Letra X %d\n",asterisco,soma,letrax);
+    criaAsterico(matriz,asterisco);
+    criaSoma(matriz,soma);
+    criaLetraX(matriz,letrax);
 }
