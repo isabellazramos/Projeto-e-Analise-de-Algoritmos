@@ -11,4 +11,4 @@ add_executable(TP00_PAA
         headers/funcoes.h
         headers/menu.h
         src/funcoes.c
-        main.c)
+        main.c src/menu.c)

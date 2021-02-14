@@ -7,7 +7,7 @@
 
 typedef struct
 {
-    char matriz[LINHA][COLUNA];
+     char matriz[LINHA][COLUNA];
 }structMatriz;
 
 void inicializaMatriz(structMatriz *matriz);
@@ -16,3 +16,10 @@ void criaAsterico(structMatriz *matriz, int quantidade);
 void criaSoma(structMatriz *matriz, int quantidade);
 void criaLetraX(structMatriz *matriz, int quantidade);
 void criaAleatorias(structMatriz *matriz, int quantidade);
+void criaObraAluno(structMatriz *matriz, int quantidade);
+void criaObraSorrindo(structMatriz *matriz, int quantidade);
+void criaObraPiscando(structMatriz *matriz, int quantidade);
+void criaObraDormindo(structMatriz *matriz, int quantidade);
+void criaObraSurpresa(structMatriz *matriz, int quantidade);
+int verificaQuantidade(int quantidade);
+int verificaQuantidade2(int quantidade);
