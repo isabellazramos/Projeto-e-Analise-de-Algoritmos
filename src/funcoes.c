@@ -3,6 +3,7 @@
 
 int verificaQuantidade(int quantidade){
     if(quantidade > 100){
+        printf("A quantidade de figuras agora eh 100.\n");
         return 100;
     } else{
         return quantidade;
@@ -44,7 +45,7 @@ void imprimeMatriz(structMatriz matriz){
     }
 }
 
-void criaAsterico(structMatriz *matriz, int quantidade){
+void criaAsterisco(structMatriz *matriz, int quantidade){
     int linha,coluna;
     srand(time(NULL));
     quantidade = verificaQuantidade(quantidade);
@@ -115,7 +116,7 @@ void criaAleatorias(structMatriz *matriz, int quantidade){
     letrax = verificaQuantidade2(letrax);
     printf("Asterisco: %d \n Soma: %d \n Letra X: %d\n",asterisco,soma,letrax);
 
-    criaAsterico(matriz,asterisco);
+    criaAsterisco(matriz,asterisco);
     criaSoma(matriz,soma);
     criaLetraX(matriz,letrax);
 
@@ -136,7 +137,7 @@ void criaObraAluno(structMatriz *matriz, int quantidade){
     dormindo = verificaQuantidade2(dormindo);
     surpresa = quantidade - (piscando + sorrindo + dormindo);
     surpresa = verificaQuantidade2(surpresa);
-    printf("Sorrindo: %d \n Piscando: %d \n Dormindo: %d \n Surpresa: %d \n",sorrindo,piscando, dormindo,surpresa);
+    printf("Sorrindo:%d \n Piscando:%d \n Dormindo:%d \n Surpresa:%d \n",sorrindo,piscando, dormindo,surpresa);
     criaObraSorrindo(matriz,sorrindo);
     criaObraPiscando(matriz,piscando);
     criaObraDormindo(matriz,dormindo);

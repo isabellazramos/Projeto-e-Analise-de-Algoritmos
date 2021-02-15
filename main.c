@@ -15,7 +15,7 @@ int main(){
             printf("Digite a quantidade de figuras (menor ou igual a zero para aleatorio):");
             scanf("%d",&qtdFiguras);
             qtdFiguras = verificaMenorQueZero(qtdFiguras);
-            criaAsterico(&matriz,qtdFiguras);
+            criaAsterisco(&matriz,qtdFiguras);
             imprimeMatriz(matriz);
 
             opRepeticao = 1;
@@ -28,7 +28,7 @@ int main(){
 
                 if(opRepeticao ==1) {
                     inicializaMatriz(&matriz);
-                    criaAsterico(&matriz, qtdFiguras);
+                    criaAsterisco(&matriz, qtdFiguras);
                     imprimeMatriz(matriz);
                 }else{
                     break;

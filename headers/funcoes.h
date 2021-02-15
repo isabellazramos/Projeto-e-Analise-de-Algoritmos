@@ -12,7 +12,7 @@ typedef struct
 
 void inicializaMatriz(structMatriz *matriz);
 void imprimeMatriz(structMatriz matriz);
-void criaAsterico(structMatriz *matriz, int quantidade);
+void criaAsterisco(structMatriz *matriz, int quantidade);
 void criaSoma(structMatriz *matriz, int quantidade);
 void criaLetraX(structMatriz *matriz, int quantidade);
 void criaAleatorias(structMatriz *matriz, int quantidade);
