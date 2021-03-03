@@ -40,7 +40,7 @@ exceção da primeira e última que já irão conter o símbolo '-'
 :heavy_check_mark: Gerar obra de arte de asteriscos;\
 :heavy_check_mark: Gerar obra de arte de soma;\
 :heavy_check_mark: Gerar obra de arte da letra X;\
-:heavy_check_mark: Gerar obra de arte do aluno X;
+:heavy_check_mark: Gerar obra de arte do aluno;
 
 ## :rocket: Tecnologias ##
 
