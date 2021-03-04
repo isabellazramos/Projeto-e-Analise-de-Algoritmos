@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Projeto e Analise De Algoritmos" />
+<!--  <img src="./.github/app.gif" alt="Projeto e Analise De Algoritmos" />
 
   &#xa0;
 
